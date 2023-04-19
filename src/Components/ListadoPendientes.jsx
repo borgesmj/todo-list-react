@@ -2,7 +2,7 @@
 import React from 'react'
 import Tareapendiente from './Tareapendiente'
 
-const ListadoPendientes = ({pendientes, setPendiente, eliminarPendiente}) => {
+const ListadoPendientes = ({pendientes, setPendiente, eliminarPendiente, marcarTareaRealizada}) => {
 
 
   return (
@@ -17,6 +17,7 @@ const ListadoPendientes = ({pendientes, setPendiente, eliminarPendiente}) => {
                 pendiente = {pendiente}
                 setPendiente = {setPendiente}
                 eliminarPendiente = {eliminarPendiente}
+                marcarTareaRealizada = {marcarTareaRealizada}
               />
             )
           )}

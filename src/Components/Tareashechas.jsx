@@ -2,7 +2,20 @@ import React from 'react'
 
 
 
-const Tareashechas = () => {
+const Tareashechas = ({title, date, description, id, eliminarHecho}) => {
+
+   
+    
+    const handleEliminar = () => {
+        const mensaje = confirm('¿Desea eliminar esta tarea?')
+        if (mensaje) {
+            eliminarHecho(id)
+        }
+
+
+    }
+
+
   return (
     <div className="m-3 bg-white shadow-md px-5 py-10 rounded-xl" >
     {/* impresiones en la pantalla */}   
@@ -11,7 +24,7 @@ const Tareashechas = () => {
                 >
                     Tarea:{' '}
                     <span className="font-normal normal-case">
-                        Aprender HTML
+                        {title}
                     </span>
                 </p>
                 <p 
@@ -19,7 +32,7 @@ const Tareashechas = () => {
                 >
                     Fecha:{' '}
                     <span className="font-normal normal-case">
-                        15/02/2023
+                       {date}
                     </span>
                 </p>
                 <p 
@@ -27,13 +40,13 @@ const Tareashechas = () => {
                 >
                     Comentario:{' '}
                     <span className="font-normal normal-case">
-                        HECHO
+                        {description}
                     </span>
                 </p>
                 <div className='flex mt-6 content-center justify-center'>
                     <button
                         className='bg-red-400 py-2 px-3 rounded-xl font-bold uppercase hover:bg-red-600'
-                        // onClick={handleEliminar}
+                        onClick={handleEliminar}
                     >
                         Eliminar
                     </button>

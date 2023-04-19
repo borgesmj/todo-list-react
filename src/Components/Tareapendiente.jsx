@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tareapendiente = ({pendiente, setPendiente, eliminarPendiente}) => {
+const Tareapendiente = ({pendiente, setPendiente, eliminarPendiente, marcarTareaRealizada}) => {
         const {tarea, fecha, comentario, id} = pendiente
 
         const handleEliminar = () => {
@@ -10,7 +10,15 @@ const Tareapendiente = ({pendiente, setPendiente, eliminarPendiente}) => {
                 eliminarPendiente(id)
             }
         }
-  return (
+
+        const handleRealizada = () =>{
+            const respuesta = confirm('¿Deseas marcar esta tarea como realizada?')
+            if (respuesta){
+
+                marcarTareaRealizada(id)
+            }
+        }
+return (
         <div className="m-3 bg-white shadow-md px-5 py-10 rounded-xl" >
                 {/* impresiones en la pantalla */}
 
@@ -40,10 +48,9 @@ const Tareapendiente = ({pendiente, setPendiente, eliminarPendiente}) => {
                 </p>
                 
                 <div className=' mt-6 flex flex-row content-center'>
-
                     <button
                         className='bg-green-200 py-2 px-3 rounded-xl font-bold uppercase hover:bg-green-600 '
-
+                        onClick={handleRealizada}
                     >
                         Realizado
                     </button>

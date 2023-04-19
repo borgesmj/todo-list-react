@@ -2,11 +2,25 @@ import React from 'react'
 import Tareashechas from './Tareashechas'
 import ListadoPendientes from './ListadoPendientes'
 
-const Listadohechos = () => {
+const Listadohechos = ({hechos, eliminarHecho}) => {
+  // console.log('array hechos', hechos)  
+  
   return (
     <div  className='lg:w-1/3 md:w-full'>
       <h1 className='text-xl mb-6'>Listado de las tareas <span className='text-indigo-600 font-bold'>Hechas</span></h1>
-      <Tareashechas/>
+      {
+        hechos.map( hecho  => {
+          // console.log('Hecho', hecho)
+          return  <Tareashechas 
+              key={hecho.id} 
+              title={hecho.tarea}
+              date={hecho.fecha}
+              description={hecho.comentario} 
+              id={hecho.id}
+              eliminarHecho={eliminarHecho}
+            />
+        }
+      )}
     </div>
   )
 }

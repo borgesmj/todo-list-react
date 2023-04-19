@@ -4,7 +4,7 @@ import Errores from './Errores'
 
 
 
-const Formulario = ({pendientes, setPendientes, pendiente, setPendiente }) => {
+const Formulario = ({pendientes, setPendientes, pendiente, setPendiente, realizado}) => {
     const [tarea, setTarea] = useState('')
     const [fecha, setFecha] = useState('')
     const [comentario, setComentario] = useState('')
@@ -52,7 +52,7 @@ const Formulario = ({pendientes, setPendientes, pendiente, setPendiente }) => {
             tarea,
             fecha,
             comentario,
-            // id: generarID()
+            realizado
         }
 
         //==============================================================
