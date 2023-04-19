@@ -82,7 +82,7 @@ const Formulario = ({pendientes, setPendientes, pendiente, setPendiente, realiza
     }
 
   return (
-    <div className='ml-5 mr-5 lg:w-1/3 md:w-full'>
+    <div className='ml-5 mr-5  w-full xl:w-1/3'>
         <h1 className='text-xl'>Agrega un nuevo <span className='text-indigo-600 font-bold'>Pendiente</span></h1>
         <br />
         <form 

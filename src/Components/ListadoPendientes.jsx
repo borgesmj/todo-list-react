@@ -6,7 +6,7 @@ const ListadoPendientes = ({pendientes, setPendiente, eliminarPendiente, marcarT
 
 
   return (
-    <div  className='lg:w-1/3 md:w-full'>
+    <div  className='w-full xl:w-1/3'>
        <h1 className='text-xl mb-6'>Listado de las tareas <span className='text-indigo-600 font-bold'>Pendientes</span></h1>
 
           {pendientes.map( (pendiente) => 

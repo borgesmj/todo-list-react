@@ -106,7 +106,7 @@ const marcarTareaRealizada = (id) => {
           </form>
       </div>
       {mensaje && <Instrucciones/>}
-      <div className='container  mt-20 flex lg:content-between xl:flex-row sm:flex-col'>
+      <div className='container  mt-20 flex flex-col xl:content-between xl:flex-row'>
           <Formulario
             pendientes={pendientes}
             setPendientes={setPendientes}
