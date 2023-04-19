@@ -91,19 +91,21 @@ const marcarTareaRealizada = (id) => {
     }
 
   return (
-    <div className="App">
-      <Header/>
-     
-      <div className='w-1/5'>
-          <form 
+    <div className="App w-full">
+        <Header/>
+        <div className="flex flex-col xl:flex-row mt-10">
+          <form className='w-2/12 xl:w-1/5'
           >
             <input 
               type="submit" 
               value={mensaje ? 'cerrar' : "ver Instrucciones"} 
               onClick={verInstrucciones}
-              className='bg-indigo-500 cursor-pointer uppercase p-3 ml-5 mt-5 w-full  rounded-3xl hover:bg-indigo-700 text-white sm:text-xs'
+              className='bg-indigo-500 cursor-pointer uppercase p-3 ml-5 mt-5 xl:w-full xl:text-xl rounded-3xl hover:bg-indigo-700 text-white text-xs'
             />
           </form>
+          <div>
+            {mensaje && <Instrucciones/>}
+          </div> 
       </div>
       {mensaje && <Instrucciones/>}
       <div className='container  mt-20 flex flex-col xl:content-between xl:flex-row'>
